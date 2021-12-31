@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No. 5</title>
+    <style>
+        span {
+            visibility: hidden;
+            color: red;
+        }
+
+        h1 {
+            visibility: hidden;
+        }
+
+
+    </style>
+</head>
+<body>
+<h2 style="color: aqua;">Natasya kurnia</h2>
+<h2 style="color: aqua;">0110121269</h2>
+    <p>Nama Lengkap
+    <input id="nama" type="text"  placeholder="Masukan Nama">
+    <span>Nama Tidak Boleh Kosong</span>
+    </p>
+
+    <p>Email
+    <input id="email" type="text" placeholder="Masukan Email Anda">
+    <span>Email Tidak Boleh Kosong</span>
+    </p>
+
+    <p>Jam Keberangkatan
+    <input id="jam" type="time">
+    <span>Jam Keberatan tidak boleh kosong</span>
+    </p>
+
+    <p>Tujuan Keberangkatan
+        <select name="" id="tujuan">
+            <option value="">Jakarta</option>
+            <option value="">Bali</option>
+            <option value="">Surabaya</option>
+            <option value="">Yogyakarta</option>
+            <option value="">Lampung</option>
+            <option value="">Makasar</option>
+
+
+        </select>
+    <span>Tujuan Keberangkatan Tidak Boleh kosong</span>
+    </p>
+
+    <p>Jumlah Tiket
+    <input id="jumlah"  type="number" max="10" placeholder="Maksimal Tiket 10">
+    <span>Jumlah Tiket tidak boleh kosong</span>
+    </p>
+    <button onclick="proses()">Kirim</button>
+
+    <h1>Sukses</h1>
+
+    <script>
+        let nama = document.getElementById("nama")
+        let email = document.getElementById("email")
+        let jam = document.getElementById("jam")
+        let tujuan = document.getElementById("tujuan")
+        let jumlah = document.getElementById("jumlah")
+        let span = document.getElementsByTagName("span")
+
+        function proses() {
+
+
+        if (nama.value =="") {
+            span[0].style.visibility = "visible"
+        }
+        if (email.value =="") {
+            span[1].style.visibility = "visible"
+        }
+        if (jam.value =="") {
+            span[2].style.visibility = "visible"
+        }
+        if (tujuan.value =="") {
+            span[3].style.visibility = "visible"
+        }
+        if (jumlah.value =="") {
+            span[4].style.visibility = "visible"
+        }
+
+
+    }
+    </script>
+</body>
+</html>

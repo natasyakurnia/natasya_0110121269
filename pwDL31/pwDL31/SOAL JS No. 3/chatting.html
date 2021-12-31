@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>No. 3</title>
+  </head>
+  <body>
+<h1 style="color: aqua;">Natasya kurnia</h1>
+<h1 style="color: aqua;">0110121269</h1>
+
+    <div class="container" style="display: table; border: 1px solid; padding: 5px; width: 400px; float: left;">
+
+
+      <div class="pesanS1" style="border: 1px solid; height: 300px; width: 400px; margin-bottom: 10px; overflow: scroll; scroll-behavior: auto;"  id="pesanS1"></div>
+
+      <form onsubmit="kirimPesan()" id="chatForm1">
+        <input type="text" id="pesan1" class="pesan1" style="display: table-cell; height: 20px; border: none;width: 85%; background-color: rgba(245, 222, 179, 0.556);">
+        <button onclick="">Kirim</button>
+      </form>
+    </div>
+
+
+    <script type="text/javascript">
+      var form = document.getElementById("chatForm1");
+      var terima = document.getElementById("pesan1");
+      var jawab = document.getElementById("pesanS1");
+      var chattt = terima.value;
+
+      function handleForm(event) {
+        event.preventDefault();
+      }
+
+      form.addEventListener("submit", handleForm);
+      function kirimPesan() {
+        jawab.innerHTML += terima.value + "<br>";
+        scrollToBottom("pesanS1");
+        form.reset();
+      }
+      function scrollToBottom(id) {
+        var div = document.getElementById(id);
+        div.scrollTop = div.scrollHeight - div.clientHeight;
+      }
+
+    </script>
+  </body>
+</html>
